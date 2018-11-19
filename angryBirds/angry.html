@@ -1,0 +1,98 @@
+<html>
+
+<head>
+    <title>Angry birds</title>
+    <style>
+        
+        #contenedor {
+            width: 95%;
+            height: 95%;
+            margin: auto;
+            background-image: url(dondo.png);
+
+        }
+
+        .arrow {
+            position: absolute;
+            top:43%;
+            left: 0px;
+            margin-right: 83%;
+            font-size: 140px;
+            text-align: right;
+            transform: rotate(0deg);
+            animation: bouncearrow 1s infinite;
+            color: #ffc728;
+        }
+
+        @-webkit-keyframes bouncearrow {
+            0% {
+                right: 0px;
+            }
+
+            50% {
+                right: 20px;
+                color: #000000;
+            }
+
+            100% {
+               right: 0px;
+            }
+        }
+
+        @keyframes bouncearrow {
+            0% {
+                right: 0px;
+            }
+
+            50% {
+                right: 20px;
+                color: #000000;
+            }
+
+            100% {
+                right: 0px;
+            }
+        }
+       
+        #fondo{
+            fill: transparent;
+        }
+        #puntos{
+            position: absolute;
+            top:4%;
+            left: 4%;
+            font-size: 40px;
+            /* margin-right: 83%; */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="contenedor">
+        <svg id="escenario" width=100% height=100%>
+            <defs>
+                <pattern id = "attachedImage" height = "100%" width = "100%" patternContentUnits = "objectBoundingBox">
+                    <image xlink:href = "miPajaro.png" preserveAspectRatio = "none" width = "1" height = "1"/>
+                </pattern>
+                <pattern id = "attachedImage2" height = "100%" width = "100%" patternContentUnits = "objectBoundingBox">
+                        <image xlink:href = "angry.png" preserveAspectRatio = "none" width = "1" height = "1"/>
+                </pattern>
+                <pattern id = "attachedImage3" height = "100%" width = "100%" patternContentUnits = "objectBoundingBox">
+                        <image xlink:href = "cata.png" preserveAspectRatio = "none" width = "1" height = "1"/>
+                </pattern>
+                <pattern id = "attachedImage3" height = "100%" width = "100%" patternContentUnits = "objectBoundingBox">
+                        
+                </pattern>
+            </defs>
+            <rect id="fondo" x=0 y=0 width=100% height=100% stroke="black" stroke-width=1 />
+        </svg>
+        <x-gif id="explosion" src="explosion.gif"></x-gif>
+        <div class="arrow">&#8674;</div>
+        <div id="puntos"></div>
+    </div>
+    
+</body>
+<script src="angry.js"></script>
+
+</html>
