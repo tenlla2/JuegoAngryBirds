@@ -1,1 +1,0 @@
-If you have any problem with the resolution of your screen, you must reduce it to 50%.
